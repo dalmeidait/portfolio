@@ -1,0 +1,117 @@
+{
+  "context": "Local production build; gzip; Chrome headless; default Lighthouse mobile and desktop profiles; not field data",
+  "results": [
+    {
+      "page": "home",
+      "device": "mobile",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 2105.4678000000004,
+      "cls": 0.020217862302367808,
+      "tbtMs": 0
+    },
+    {
+      "page": "avanceos-microsoft-365",
+      "device": "mobile",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 2104.2678,
+      "cls": 0.0006604826866558244,
+      "tbtMs": 0
+    },
+    {
+      "page": "oficina-avance-on-premises",
+      "device": "mobile",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 2103.7500999999997,
+      "cls": 0.0006085596290007608,
+      "tbtMs": 0
+    },
+    {
+      "page": "oficina-avance-migracao",
+      "device": "mobile",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 2103.348,
+      "cls": 0.0016502878281508464,
+      "tbtMs": 0
+    },
+    {
+      "page": "home",
+      "device": "desktop",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 444.1888,
+      "cls": 0.001215809065914797,
+      "tbtMs": 0
+    },
+    {
+      "page": "avanceos-microsoft-365",
+      "device": "desktop",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 443.86440000000005,
+      "cls": 0.0007983130659649381,
+      "tbtMs": 0
+    },
+    {
+      "page": "oficina-avance-on-premises",
+      "device": "desktop",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 447.9759,
+      "cls": 0.0011319381395715315,
+      "tbtMs": 0
+    },
+    {
+      "page": "oficina-avance-migracao",
+      "device": "desktop",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 443.9588,
+      "cls": 0.0019037718829920795,
+      "tbtMs": 0
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+name: Qualidade do portfólio
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [revisao/visual-premium]
+permissions:
+  contents: read
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm audit --audit-level=moderate
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:release
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: revisao-visual-e-testes
+          path: artifacts/final
