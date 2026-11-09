@@ -85,7 +85,7 @@ function HomePage() {
             <span className="status-dot" /> INFRAESTRUTURA · CLOUD · SEGURANÇA
           </p>
           <h1 id="hero-title">
-            Daniel Barros
+            Daniel
             <br />
             <span>Almeida.</span>
           </h1>
@@ -105,8 +105,7 @@ function HomePage() {
             </ExternalLink>
           </div>
           <div className="hero-location">
-            <MapPin size={14} /> São Paulo, Brasil <span /> Tecnologia com
-            propósito.
+            <MapPin size={14} /> São Paulo, Brasil
           </div>
         </div>
         <CloudArchitecture />
@@ -117,15 +116,17 @@ function HomePage() {
       <div className="tech-strip">
         <div className="container">
           <span>FOCO DE ATUAÇÃO</span>
-          <p>Microsoft 365</p>
-          <i />
-          <p>Microsoft Entra ID</p>
-          <i />
-          <p>Microsoft Intune</p>
-          <i />
-          <p>Windows Server</p>
-          <i />
-          <p>Segurança</p>
+          <ul className="focus-list">
+            {[
+              "Microsoft 365",
+              "Microsoft Entra ID",
+              "Microsoft Intune",
+              "Windows Server",
+              "Segurança",
+            ].map((area) => (
+              <li key={area}>{area}</li>
+            ))}
+          </ul>
         </div>
       </div>
       <section className="section container about" id="sobre">
@@ -229,11 +230,10 @@ function HomePage() {
               key={project.slug}
               className={`project-card${project.type === "cloud" ? " project-featured" : ""}`}
             >
-              <a
-                href={projectUrl(project.slug)}
-                className="project-image-link"
-                aria-label={`Conhecer ${project.name} — ${project.category}`}
-              >
+              <a href={projectUrl(project.slug)} className="project-image-link">
+                <span className="sr-only">
+                  Conhecer {project.name} — {project.category}:{" "}
+                </span>
                 <ProjectVisual type={project.type} />
                 <span className="image-arrow">
                   <ArrowUpRight size={19} />
@@ -302,7 +302,7 @@ function HomePage() {
               ["Microsoft Certified", "Azure Fundamentals", "AZ-900"],
               ["ITIL", "ITIL 4 Foundation", "ITIL 4"],
               ["EXIN", "Information Security Foundation", "ISFS"],
-              ["Aviatrix", "Multicloud Network Associate", "MCNA"],
+              ["CertiProf", "AI Agent Manager", "AIAM™"],
             ].map(([issuer, name, code]) => (
               <div className="cert-row" key={code}>
                 <div className="cert-icon">

@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [main]
   push:
-    branches: [revisao/visual-premium]
+    branches: [revisao/visual-premium, melhoria/identidade-temas]
 permissions:
   contents: read
 concurrency:
@@ -25,6 +25,7 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run test:release
+      - run: npm run test:themes
       - uses: actions/upload-artifact@v4
         if: always()
         with:

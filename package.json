@@ -11,7 +11,8 @@
     "preview": "vite preview --host 127.0.0.1",
     "test:ui": "node scripts/verify.mjs",
     "test:release": "node scripts/verify-release.mjs",
-    "serve:dist": "node scripts/serve-static.mjs"
+    "serve:dist": "node scripts/serve-static.mjs",
+    "test:themes": "node scripts/verify-themes.mjs"
   },
   "dependencies": {
     "@fontsource/manrope": "^5.2.6",

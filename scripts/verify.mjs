@@ -35,7 +35,7 @@ for (const [device, width, height] of [
     await page
       .locator("h1")
       .innerText()
-      .then((text) => text.includes("Daniel Barros")),
+      .then((text) => text.includes("Daniel")),
   );
   assert(
     await page.evaluate(

@@ -1,0 +1,149 @@
+{
+  "context": "Production build, gzip, Chrome headless, Lighthouse 12.8.2 default mobile and desktop profiles; HTTP cache cleared before every audit; localStorage retained solely for theme selection. Laboratory results, not field data.",
+  "results": [
+    {
+      "theme": "light",
+      "device": "mobile",
+      "page": "home",
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "light",
+      "device": "mobile",
+      "page": "avanceos",
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "light",
+      "device": "mobile",
+      "page": "onpremises",
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "light",
+      "device": "mobile",
+      "page": "migracao",
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "light",
+      "device": "desktop",
+      "page": "home",
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "light",
+      "device": "desktop",
+      "page": "avanceos",
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "light",
+      "device": "desktop",
+      "page": "onpremises",
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "light",
+      "device": "desktop",
+      "page": "migracao",
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "dark",
+      "device": "mobile",
+      "page": "home",
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "dark",
+      "device": "mobile",
+      "page": "avanceos",
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "dark",
+      "device": "mobile",
+      "page": "onpremises",
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "dark",
+      "device": "mobile",
+      "page": "migracao",
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "dark",
+      "device": "desktop",
+      "page": "home",
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "dark",
+      "device": "desktop",
+      "page": "avanceos",
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "dark",
+      "device": "desktop",
+      "page": "onpremises",
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "theme": "dark",
+      "device": "desktop",
+      "page": "migracao",
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    }
+  ]
+}
