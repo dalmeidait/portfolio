@@ -35,14 +35,11 @@ for (const [slug, title, description] of pages) {
   const directory = resolve(output, "projetos", slug);
   await mkdir(directory, { recursive: true });
   const content = html
-    .replace(
-      /<title>.*?<\/title>/,
-      `<title>${title} | Daniel Barros Almeida</title>`,
-    )
+    .replace(/<title>.*?<\/title>/, `<title>${title} | Daniel Almeida</title>`)
     .replace(/(<meta name="description" content=")[^"]*/, `$1${description}`)
     .replace(
       /(<meta property="og:title" content=")[^"]*/,
-      `$1${title} | Daniel Barros Almeida`,
+      `$1${title} | Daniel Almeida`,
     )
     .replace(
       /(<meta property="og:description" content=")[^"]*/,
@@ -58,7 +55,7 @@ await writeFile(
   html
     .replace(
       /<title>.*?<\/title>/,
-      "<title>Página não encontrada | Daniel Barros Almeida</title>",
+      "<title>Página não encontrada | Daniel Almeida</title>",
     )
     .replace("</head>", '<meta name="robots" content="noindex" /></head>'),
 );
@@ -74,7 +71,7 @@ for (const [legacy, slug] of Object.entries(legacyRoutes)) {
   await writeFile(
     resolve(output, "projetos", legacy),
     `<!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="0;url=${destination}"><link rel="canonical" href="${origin}${destination}"><title>Projeto atualizado | Daniel Barros Almeida</title></head><body><p>Este projeto tem um novo endereço. <a href="${destination}">Acessar o projeto</a>.</p><script>location.replace(${JSON.stringify(destination)} + location.search + location.hash);</script></body></html>`,
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="0;url=${destination}"><link rel="canonical" href="${origin}${destination}"><title>Projeto atualizado | Daniel Almeida</title></head><body><p>Este projeto tem um novo endereço. <a href="${destination}">Acessar o projeto</a>.</p><script>location.replace(${JSON.stringify(destination)} + location.search + location.hash);</script></body></html>`,
   );
 }
 const urls = [

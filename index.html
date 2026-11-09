@@ -5,13 +5,31 @@
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#081B2D" />
+    <script>
+      (() => {
+        let saved;
+        try {
+          saved = localStorage.getItem("portfolio-theme");
+        } catch {}
+        const theme =
+          saved === "light" || saved === "dark"
+            ? saved
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]').content =
+          theme === "dark" ? "#081b2d" : "#f4f7fa";
+      })();
+    </script>
     <meta
       name="description"
-      content="Daniel Barros Almeida, Analista de TI. Conheça minha trajetória, competências e laboratórios de Microsoft 365, infraestrutura, cloud e segurança."
+      content="Daniel Almeida, Analista de TI. Conheça minha trajetória, competências e laboratórios de Microsoft 365, infraestrutura, cloud e segurança."
     />
     <meta
       property="og:title"
-      content="Daniel Barros Almeida | Infraestrutura, Cloud e Segurança"
+      content="Daniel Almeida | Infraestrutura, Cloud e Segurança"
     />
     <meta
       property="og:description"
@@ -19,7 +37,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
-    <title>Daniel Barros Almeida | Analista de TI</title>
+    <title>Daniel Almeida | Analista de TI</title>
   </head>
   <body>
     <div id="root"></div>

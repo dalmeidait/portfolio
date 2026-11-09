@@ -1,6 +1,12 @@
-# Daniel Barros Almeida · Portfólio
+# Daniel Almeida · Portfólio
 
 Portfólio desenvolvido do zero com React, TypeScript e Vite. Conteúdo em português brasileiro, visual corporativo e publicação estática no GitHub Pages.
+
+## Revisão atual — identidade e temas
+
+A branch `melhoria/identidade-temas` parte da `main` atualizada (`c306248`). Consulte [o relatório desta revisão](docs/IDENTIDADE-TEMAS.md). O tema inicial segue o sistema; a escolha no cabeçalho fica salva em `localStorage`. O controle mantém nome acessível estável e estado pressionado para o tema claro.
+
+`npm run test:themes` valida as quatro páginas nos dois temas em 1440 × 1000, 768 × 1024 e 390 × 844, gerando capturas e auditorias em `artifacts/final/themes/`. O workflow de qualidade executa essa suíte e a suíte de release; não publica.
 
 ## Executar
 
@@ -13,7 +19,7 @@ npm run dev
 
 Abra o endereço indicado pelo Vite, seguido de `/portfolio/`.
 
-Neste computador, Node portátil foi preparado em `%LOCALAPPDATA%\portfolio-tools`, sem instalação global. Para rever o build já pronto, execute `powershell -ExecutionPolicy Bypass -File .\iniciar-preview.ps1`. O relatório de revisão está em `VALIDACAO.md`.
+Para rever o build já pronto no Windows, execute `./iniciar-preview.ps1` no PowerShell. O script usa o Node disponível no PATH, com fallback para a instalação portátil anterior.
 
 ```sh
 npm run lint
@@ -31,6 +37,8 @@ O teste visual usa Google Chrome instalado no Windows. Em outros sistemas, execu
 
 - `src/App.tsx`: página inicial, página de projeto e estado 404.
 - `src/components.tsx`: cabeçalho, menu, rodapé, links, animação e diagramas vetoriais.
+- `src/theme.tsx` e `src/themes.css`: preferência, controle acessível e tokens dos temas.
+- `src/CloudArchitecture.tsx`: arquitetura conceitual em três níveis, com infraestrutura local explicitamente separada.
 - `src/data.ts`: fonte tipada dos três projetos e links sociais.
 - `src/styles.css`: tokens, componentes, breakpoints e movimento reduzido; Tailwind também disponível.
 - `scripts/pages.mjs`: gera HTML de entrada por projeto, metadados específicos, sitemap e página 404.
@@ -48,7 +56,7 @@ Os dados biográficos e certificações vêm do briefing. Não há números de c
 
 Atualize `src/data.ts` quando houver documentação real. Substitua os espaços reservados de evidências por imagens reais com texto alternativo, contexto e informações sensíveis ocultadas. As certificações estão apresentadas conforme informadas, sem validação independente.
 
-## Deploy e preservação da versão anterior
+## Deploy e preservação — registro da entrega anterior
 
 O remoto `origin` é `https://github.com/dalmeidait/portfolio.git`. A versão publicada e a `main` foram verificadas no commit `31032129ab8d5db4d480d3b5e7a779bcf9834f28` e preservadas na branch remota `backup/publicado-3103212`. Há também um bundle recuperável local em `artifacts/final/portfolio-remote-backup.bundle`. Nenhuma integração ou publicação foi executada.
 
@@ -72,6 +80,6 @@ Referência de implantação: [documentação oficial do Vite](https://vite.dev/
 
 ## Acessibilidade e desempenho
 
-Menu mobile com `aria-expanded`, fechamento com Escape e restauração de foco; link para pular navegação; foco visível; hierarquia de títulos; regiões semânticas; suporte a `prefers-reduced-motion`. As ilustrações decorativas não são anunciadas; a composição principal tem descrição acessível. Sem formulários ou coleta de dados.
+Menu mobile com `aria-expanded`, fechamento com Escape e restauração de foco; link para pular navegação; foco visível; hierarquia de títulos; regiões semânticas; suporte a `prefers-reduced-motion`. Ícones decorativos são ocultados da árvore de acessibilidade; os rótulos dos projetos integram o nome dos links, e a composição principal tem descrição acessível. Sem formulários ou coleta de dados.
 
 O teste automatizado verifica home e três projetos em desktop, tablet e mobile, abertura direta e atualização de rotas, ausência de overflow, navegação, âncoras e erros de execução. Métricas Core Web Vitals de usuários reais só poderão ser avaliadas após publicação e tráfego suficiente; não são prometidas pontuações não medidas.
